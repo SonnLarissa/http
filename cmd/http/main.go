@@ -1,8 +1,8 @@
 package main
 
 import (
-	"http2/http/cmd/app"
-	"http2/http/pkg/banners"
+	"http/cmd/app"
+	"http/pkg/banners"
 	"log"
 	"net"
 	"net/http"

@@ -2,7 +2,7 @@ package app
 
 import (
 	"encoding/json"
-	"http2/http/pkg/banners"
+	"http/pkg/banners"
 	"log"
 	"net/http"
 	"strconv"
@@ -127,6 +127,8 @@ func (s*Server)handleRemoveByID(writer http.ResponseWriter, request *http.Reques
 		http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
+
+
 
 	data, err := json.Marshal(item)
 	if err != nil {
