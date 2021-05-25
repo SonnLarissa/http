@@ -2,7 +2,7 @@ package app
 
 import (
 	"encoding/json"
-	"http/pkg/banners"
+	"github.com/SonnLarissa/http/pkg/banners"
 	"log"
 	"net/http"
 	"strconv"
@@ -21,10 +21,10 @@ func (s *Server) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
 	s.mux.ServeHTTP(writer, request)
 }
 func (s *Server) Init() {
-	s.mux.HandleFunc("/banners.getAll", s.handleGetAllBanners)
-	s.mux.HandleFunc("/banners.getById", s.handleGetBannerByID)
-	s.mux.HandleFunc("/banners.save", s.handleSaveBanner)
-	s.mux.HandleFunc("/banners.removeById", s.handleRemoveByID)
+	s.mux.HandleFunc("/.getAll", s.handleGetAllBanners)
+	s.mux.HandleFunc("/.getById", s.handleGetBannerByID)
+	s.mux.HandleFunc("/.save", s.handleSaveBanner)
+	s.mux.HandleFunc("/.removeById", s.handleRemoveByID)
 }
 func (s *Server) handleGetBannerByID(writer http.ResponseWriter, request *http.Request) {
 	idParam := request.URL.Query().Get("id")
