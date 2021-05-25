@@ -1,8 +1,8 @@
 package main
 
 import (
-	"http/cmd/app"
-	"http/pkg/banners"
+	"github.com/SonnLarissa/http/cmd/app"
+	"github.com/SonnLarissa/http/pkg/banners"
 	"log"
 	"net"
 	"net/http"
